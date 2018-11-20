@@ -1,0 +1,21 @@
+{
+  "name": "rafsch",
+  "version": "0.1.0",
+  "description": "tiny requestAnimationFrame scheduler.",
+  "author": "nwtks",
+  "license": "MIT",
+  "main": "dist/rafsch.js",
+  "homepage": "https://github.com/nwtks/rafsch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nwtks/rafsch"
+  },
+  "devDependencies": {
+    "rollup": "^0.67.0",
+    "rollup-plugin-buble": "^0.19.0",
+    "rollup-plugin-uglify": "^6.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  }
+}
