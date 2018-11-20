@@ -1,5 +1,3 @@
-const requestAnimationFrame = window.requestAnimationFrame
-
 function scheduler() {
   let scheduled = false
   let callback = null
@@ -7,7 +5,7 @@ function scheduler() {
     callback = f
     if (!scheduled) {
       scheduled = true
-      requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
         scheduled = false
         if (callback) {
           callback()

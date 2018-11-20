@@ -1,7 +1,5 @@
 'use strict';
 
-var requestAnimationFrame = window.requestAnimationFrame;
-
 function scheduler() {
   var scheduled = false;
   var callback = null;
@@ -9,7 +7,7 @@ function scheduler() {
     callback = f;
     if (!scheduled) {
       scheduled = true;
-      requestAnimationFrame(function () {
+      window.requestAnimationFrame(function () {
         scheduled = false;
         if (callback) {
           callback();
