@@ -1,11 +1,11 @@
 'use strict';
 
-function scheduler() {
+var createScheduler = function () {
   var scheduled = false;
   var callback = null;
   return function (f) {
     callback = f;
-    if (!scheduled) {
+    if (!scheduled && callback) {
       scheduled = true;
       window.requestAnimationFrame(function () {
         scheduled = false;
@@ -16,6 +16,6 @@ function scheduler() {
       });
     }
   }
-}
+};
 
-module.exports = scheduler;
+module.exports = createScheduler;

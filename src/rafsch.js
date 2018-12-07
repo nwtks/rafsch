@@ -1,9 +1,9 @@
-function scheduler() {
+const createScheduler = () => {
   let scheduled = false
   let callback = null
   return f => {
     callback = f
-    if (!scheduled) {
+    if (!scheduled && callback) {
       scheduled = true
       window.requestAnimationFrame(() => {
         scheduled = false
@@ -16,4 +16,4 @@ function scheduler() {
   }
 }
 
-export default scheduler
+export default createScheduler
