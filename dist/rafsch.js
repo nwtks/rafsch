@@ -9,13 +9,11 @@ var createScheduler = function () {
       scheduled = true;
       window.requestAnimationFrame(function () {
         scheduled = false;
-        if (callback) {
-          callback();
-        }
+        callback && callback();
         callback = null;
       });
     }
-  }
+  };
 };
 
 module.exports = createScheduler;
