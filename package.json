@@ -1,6 +1,6 @@
 {
-  "name": "rafsch",
-  "version": "0.1.2",
+  "name": "@nwtks/rafsch",
+  "version": "0.2.0",
   "description": "tiny requestAnimationFrame scheduler.",
   "license": "MIT",
   "main": "dist/rafsch.js",
@@ -9,7 +9,6 @@
     "dist"
   ],
   "author": "nwtks",
-  "homepage": "https://github.com/nwtks/rafsch",
   "repository": {
     "type": "git",
     "url": "https://github.com/nwtks/rafsch"
